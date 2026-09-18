@@ -1,33 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112719356', 'ym');
-
-    ym(112719356, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/112719356" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-    
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2225%22 fill=%22%230b021a%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 font-weight=%22bold%22 text-anchor=%22middle%22 fill=%22%23ffffff%22 font-family=%22sans-serif%22>N</text></svg>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Линкану со всем миром</title>
     <style>
-    /* Сброс базовых отступов */
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
-    /* Живой анимированный темный градиент на фоне */
     body {
         font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         min-height: 100vh;
@@ -35,37 +19,26 @@
         justify-content: center;
         align-items: center;
         color: #ffffff;
-        
-        /* Насыщенная палитра: глубокий фиолетовый, индиго, сапфир, темный циан */
         background: linear-gradient(-45deg, #0b021a, #2b0938, #0f3854, #120e38, #184b74);
         background-size: 300% 300%;
         animation: gradientShift 10s ease infinite;
     }
 
-    /* Анимация плавного перелива градиента */
     @keyframes gradientShift {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
     }
 
-    /* Контейнер для кнопок */
     .links-container {
         width: 100%;
         max-width: 420px;
         padding: 24px;
         display: flex;
         flex-direction: column;
-        gap: 18px; /* Расстояние между кнопками */
+        gap: 18px;
     }
 
-    /* Заголовок страницы */
     .profile-title {
         text-align: center;
         margin-bottom: 15px;
@@ -75,58 +48,88 @@
         text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     }
 
-    /* Стили для кнопок-ссылок */
     .link-btn {
         display: block;
         text-align: center;
         text-decoration: none;
         color: #ffffff;
-        background: rgba(255, 255, 255, 0.07); /* Полупрозрачный фон */
-        border: 1px solid rgba(255, 255, 255, 0.15); /* Тонкая стеклянная грань */
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.15);
         padding: 18px 24px;
         border-radius: 14px;
         font-size: 18px;
         font-weight: 600;
         letter-spacing: 0.3px;
         backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px); /* Поддержка для Safari/iOS */
+        -webkit-backdrop-filter: blur(12px);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Плавное пружинящее движение */
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
-    /* Эффект при наведении курсора на кнопку */
     .link-btn:hover {
         background: rgba(255, 255, 255, 0.18);
         border-color: rgba(255, 255, 255, 0.35);
-        transform: translateY(-4px) scale(1.02); /* Кнопка красиво приподнимается и чуть увеличивается */
+        transform: translateY(-4px) scale(1.02);
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35), 0 0 15px rgba(255, 255, 255, 0.1);
     }
 
-    /* Эффект при клике / тапе на телефоне */
     .link-btn:active {
         transform: translateY(-1px) scale(0.99);
         box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
     }
-</style>
+
+    footer {
+        text-align: center;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: 0.5px;
+        padding: 15px 0 5px 0;
+        margin-top: 20px;
+    }
+
+    footer span {
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 600;
+    }
+
+    .coffee-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px 8px;
+        margin-left: 8px;
+        vertical-align: middle;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        opacity: 0.55;
+        transition: opacity 0.25s ease, background 0.25s ease, transform 0.2s ease;
+    }
+
+    .coffee-btn:hover {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-1px);
+    }
+    </style>
 </head>
 <body>
 
     <div class="links-container">
-        <!-- Заголовок (можно удалить, если не нужен) -->
         <div class="profile-title">кто это сделал?</div>
 
-        <!-- Список кнопок -->
         <a href="https://nsuem-rasp.vercel.app/" class="link-btn" target="_blank">Расписание</a>
-        <a href="https://formatter-one.vercel.app/" class="link-btn" target="_blank">Formatter Basic</a>
+        <a href="https://formatter-one.vercel.app/" class="link-btn" target="_blank">Formatter</a>
         <a href="https://formatter-ai.vercel.app/" class="link-btn" target="_blank">Formatter AI</a>
-        
-        <!--<a href="https://example.com" class="link-btn" target="_blank">Ссылка 3</a> -->
 
-    <footer style="text-align: center;">
-      made with 💜 by <span>me</span>
-      <!-- Cloud Tips -->
-      <a href="https://pay.cloudtips.ru/p/9f8fb4a3" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px; margin-left: 8px; vertical-align: middle; text-decoration: none; font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.7); background: rgba(255, 255, 255, 0.1); border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.15); opacity: 0.55; transition: opacity 0.25s ease, background 0.25s ease, transform 0.2s ease;" onmouseover="this.style.opacity='1'; this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(-1px)';" onmouseout="this.style.opacity='0.55'; this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)';">☕ На кофе</a>
-    </footer>
+        <footer>
+            made with 💜 by <span>me</span>
+            <a href="https://pay.cloudtips.ru/p/9f8fb4a3" target="_blank" rel="noopener noreferrer" class="coffee-btn">☕ На кофе</a>
+        </footer>
     </div>
 
 </body>
